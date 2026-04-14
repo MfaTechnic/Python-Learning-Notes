@@ -1,0 +1,22 @@
+# --- 1. GÜN: DEĞİŞKENLER VE İŞLEMLER ---
+
+# 1. Değişken Tanımlama
+isim = "Deniz"
+dogum_yili = 1995
+boy = 1.78
+yazilimci_mi = True
+
+# 2. Matematiksel Hesaplama
+su_anki_yil = 2026
+yas = su_anki_yil - dogum_yili
+
+# 3. Bilgileri Ekrana Yazdırma (f-string kullanarak)
+print(f"Merhaba {isim}! {yas} yaşındasın.")
+print(f"Boyun: {boy} metre. Yazılımcı durumu: {yazilimci_mi}")
+
+# 4. Küçük Bir Hesap Makinesi
+sayi1 = 20
+sayi2 = 3
+
+print(f"{sayi1} / {sayi2} işleminin sonucu: {sayi1 / sayi2}")
+print(f"{sayi1} sayısının {sayi2} ile bölümünden kalan: {sayi1 % sayi2}")
