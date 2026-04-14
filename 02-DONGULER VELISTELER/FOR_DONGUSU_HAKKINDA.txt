@@ -1,0 +1,84 @@
+1. Temel Yapı (Sözdizimi)
+Python'da bir for döngüsü şu şekilde yazılır:
+
+Python
+for eleman in koleksiyon:
+    # Yapılacak işlemler
+koleksiyon: Üzerinde gezineceğimiz veri grubu (bir liste veya range() gibi).
+
+eleman: O an elimizde tuttuğumuz veriyi temsil eden geçici isim.
+
+: (İki Nokta): Döngünün başladığını belirtir.
+
+Girinti (Tab/Boşluk): Döngünün içindeki kodları tanımlar.
+
+Python'da for döngüsü, bir koleksiyonun (liste, metin dizisi, sayı aralığı vb.) içindeki her bir öğeyi sırayla almak ve bu öğeler tükenene kadar belirli işlemleri tekrar etmek için kullanılır.
+
+Bunu bir market sepetindeki ürünleri tek tek barkoddan geçiren bir kasiyere benzetebilirsin. Sepet boşalana kadar işlem devam eder.
+
+1. Temel Yapı (Sözdizimi)
+Python'da bir for döngüsü şu şekilde yazılır:
+
+Python
+for eleman in koleksiyon:
+    # Yapılacak işlemler
+koleksiyon: Üzerinde gezineceğimiz veri grubu (bir liste veya range() gibi).
+
+eleman: O an elimizde tuttuğumuz veriyi temsil eden geçici isim.
+
+: (İki Nokta): Döngünün başladığını belirtir.
+
+Girinti (Tab/Boşluk): Döngünün içindeki kodları tanımlar.
+
+2. Sayı Aralıkları ile Çalışmak: range()
+Eğer bir işlemi belirli bir sayıda tekrar etmek istiyorsan range() fonksiyonunu kullanırsın.
+
+Python
+# 0'dan başlar, 5'e kadar gider (5 dahil değildir)
+for i in range(5):
+    print(f"{i}. adım: Merhaba!")
+range(başlangıç, bitiş, artış) şeklinde de kullanabilirsin:
+
+Python
+for sayi in range(1, 10, 2):
+    print(sayi)  # 1, 3, 5, 7, 9 çıktılarını verir.
+3. Listeler Üzerinde Gezinmek
+Daha önce öğrendiğin listelerle for döngüsü çok güçlü bir ikilidir.
+
+Python
+meyveler = ["Elma", "Muz", "Çilek"]
+
+for meyve in meyveler:
+    print(f"Bugün {meyve} yiyeceğim.")
+Burada meyve değişkeni, döngü her döndüğünde listenin sıradaki elemanına dönüşür:
+
+Dönüşte: meyve = "Elma"
+
+Dönüşte: meyve = "Muz"
+
+Dönüşte: meyve = "Çilek"
+
+4. Döngü İçinde Kontroller (If-Else)
+Döngünün her adımında bir karar verebilirsin. Örneğin, sadece çift sayıları yazdırmak isteyelim:
+
+Python
+sayilar = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+for s in sayilar:
+    if s % 2 == 0:
+        print(f"{s} bir çift sayıdır.")
+    else:
+        continue # Bu sayı tek ise bir sonrakine geç
+5. break ve continue Komutları
+Bu iki komut döngünün akışını yönetmeni sağlar:
+
+break: Döngüyü tamamen durdurur ve çıkar.
+
+continue: Döngünün o anki adımını atlar ve bir sonraki adıma geçer.
+
+Python
+# Örnek: 5'i görünce dur
+for rakam in range(10):
+    if rakam == 5:
+        break 
+    print(rakam)
